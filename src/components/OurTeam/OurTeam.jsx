@@ -15,7 +15,7 @@ const OurTeam = () => {
 
             <div className="our-team-container">
                 <div className="our-team-format">
-                    <img className='profile_image'
+                    <img className='team-profile_image'
                         src={profile_image}
                          alt="profile image"/>
                     <h5>Avinash Singh <br/>Founder,CEO</h5>
@@ -33,14 +33,12 @@ const OurTeam = () => {
                     </div>
                 </div>
                 <div className="our-team-format">
-                    <img className='profile_image'
-                         src={profile_image}
-                         alt="profile image"/>
-                    <h5>Shubham Shourav <br/>Co-Founder</h5>
+                    <img className='team-profile_image' src={profile_image} alt="profile image"/>
+                    <h5>Vipul Kumar<br/>Co-Founder</h5>
                     <p>
                         He is alumni of CIMP, Patna,Bihar.Goal-driven management professional with expertise in dealer management,
                         sales strategy, and market analysis. Currently leading sales initiatives and operational
-                        improvements at Parle Biscuits Ltd. Skilled in optimizing market reach,
+                        improvements at XXXX. Skilled in optimizing market reach,
                         strengthening dealer relationships, and executing branding strategies.
                         Adept at leveraging data to drive growth and meet business objectives.
                     </p>

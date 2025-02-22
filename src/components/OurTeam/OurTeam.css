@@ -75,6 +75,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: auto;
 }
 
 .our-team-format p {
@@ -98,4 +99,12 @@
     transform: scale(1.05);
     transition: 0.4s;
     cursor: pointer;
+}
+
+.team-profile_image{
+    border-radius: 400px;
+    border: 7px solid #B415FF;
+    width: 250px;
+    height: 250px;
+    margin: auto;
 }

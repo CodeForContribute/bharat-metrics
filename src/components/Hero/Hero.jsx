@@ -11,14 +11,12 @@ const Hero = () => {
                  height="200" alt="BharatMetrics"
                  className="profile_image"/>
             <h1><span>One stop Solution for all your problems.</span></h1>
-            <p>We are a consulting company providing solution for all kind of industry challenges from hiring,
-                training,software etc solutions.We offer expert advice and specialized services to businesses and
-                organizations and
-                provide guidance on a wide range of issues, from strategic planning and market analysis to operational
-                efficiency and risk management.We are typically staffed by experienced professionals with deep industry
-                knowledge and expertise and work closely with clients to understand their needs and develop tailored
-                solutions that meet their specific objectives.We are a valuable resource for businesses of all sizes,
-                helping them to navigate complex challenges, improve performance, and achieve their goals.</p>
+            <p>We are dynamic consulting firm specializing in recruitment & training,
+                digital marketing, and IT solutions. Our mission is to empower businesses with expert guidance,
+                innovative strategies, and tailored solutions that drive growth and efficiency.
+                With a team of seasoned professionals, we bridge the gap between challenges and success,
+                helping businesses stay ahead in a competitive landscape.
+            </p>
             <div className="hero-action">
                 <AnchorLink className="anchor-link" offset={50} href="#contact">
                     <div className="hero-connect">

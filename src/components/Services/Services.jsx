@@ -13,14 +13,12 @@ const Services = () => {
             <div className="services-container">
                 <div className="services-format">
                     <h3>01</h3>
-                    <h2>Hiring</h2>
+                    <h2>Recruitment & Training</h2>
                     <p>
                         <ul>
-                            <li>Targeted strategies, reaching specific demographics.</li>
-                            <li> Data-driven insights, optimizing campaign performance.</li>
-                            <li> Content creation, engaging and valuable information.</li>
-                            <li> Social media engagement, building brand communities.</li>
-                            <li> SEO and SEM, driving organic and paid traffic.</li>
+                            <li>End-to-end hiring solutions to find the right talent.</li>
+                            <li>Corporate training programs to upskill employees.</li>
+                            <li>Employee engagement and HR consulting for better retention.</li>
                         </ul>
                     </p>
                     <div className="services-readmore">
@@ -31,14 +29,12 @@ const Services = () => {
                 </div>
                 <div className="services-format">
                     <h3>02</h3>
-                    <h2>Customised Solution</h2>
+                    <h2>Digital Marketing Solutions</h2>
                     <p>
                         <ul>
-                            <li>Targeted strategies, reaching specific demographics.</li>
-                            <li> Data-driven insights, optimizing campaign performance.</li>
-                            <li> Content creation, engaging and valuable information.</li>
-                            <li> Social media engagement, building brand communities.</li>
-                            <li> SEO and SEM, driving organic and paid traffic.</li>
+                            <li>SEO & PPC strategies to enhance online visibility.</li>
+                            <li>Social media marketing & branding.</li>
+                            <li>Content marketing, email campaigns, and performance analytics.</li>
                         </ul>
                     </p>
                     <div className="services-readmore">
@@ -49,67 +45,12 @@ const Services = () => {
                 </div>
                 <div className="services-format">
                     <h3>03</h3>
-                    <h2>Digital marketing</h2>
+                    <h2>IT solutions</h2>
                     <p>
                         <ul>
-                            <li>Targeted strategies, reaching specific demographics.</li>
-                            <li> Data-driven insights, optimizing campaign performance.</li>
-                            <li> Content creation, engaging and valuable information.</li>
-                            <li> Social media engagement, building brand communities.</li>
-                            <li> SEO and SEM, driving organic and paid traffic.</li>
-                        </ul>
-                    </p>
-                    <div className="services-readmore">
-                        <p>Read More</p>
-                        <img src={arrow_icon} alt="arrow"/>
-                    </div>
-
-                </div>
-                <div className="services-format">
-                    <h3>04</h3>
-                    <h2>Digital marketing</h2>
-                    <p>
-                        <ul>
-                            <li>Targeted strategies, reaching specific demographics.</li>
-                            <li> Data-driven insights, optimizing campaign performance.</li>
-                            <li> Content creation, engaging and valuable information.</li>
-                            <li> Social media engagement, building brand communities.</li>
-                            <li> SEO and SEM, driving organic and paid traffic.</li>
-                        </ul>
-                    </p>
-                    <div className="services-readmore">
-                        <p>Read More</p>
-                        <img src={arrow_icon} alt="arrow"/>
-                    </div>
-
-                </div>
-                <div className="services-format">
-                    <h3>05</h3>
-                    <h2>Web design</h2>
-                    <p>
-                        <ul>
-                            <li>Front-end: user experience, visual magic.</li>
-                            <li> Back-end: server logic, data&#39;s foundation.</li>
-                            <li> Full-stack: bridging both, seamless flow.</li>
-                            <li> Languages: HTML, CSS, JavaScript, and beyond.</li>
-                            <li>Constant evolution, endless possibilities.</li>
-                        </ul>
-                    </p>
-                    <div className="services-readmore">
-                        <p>Read More</p>
-                        <img src={arrow_icon} alt="arrow"/>
-                    </div>
-                </div>
-                <div className="services-format">
-                    <h3>06</h3>
-                    <h2>App design</h2>
-                    <p>
-                        <ul>
-                            <li>User-centric design, intuitive interfaces.</li>
-                            <li>Native or cross-platform, tailored to needs.</li>
-                            <li>Coding logic, from simple to complex features.</li>
-                            <li>Testing and debugging, ensuring smooth function.</li>
-                            <li>Deployment and updates, reaching global users.</li>
+                            <li>Custom software development for business automation.</li>
+                            <li>Website & app development.</li>
+                            <li>Cloud solutions, cybersecurity, and IT consulting.</li>
                         </ul>
                     </p>
                     <div className="services-readmore">
