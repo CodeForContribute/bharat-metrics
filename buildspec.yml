@@ -6,6 +6,8 @@ phases:
     runtime-versions:
       nodejs: 22
     commands:
+      - npm cache clean --force
+      - npm install -g npm@latest
       # Inform about the dependency installation process
       - echo "📦 Installing project dependencies..."
       # Use 'npm ci' for clean and consistent installs in CI/CD environments.
