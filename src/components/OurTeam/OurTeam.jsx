@@ -34,7 +34,7 @@ const OurTeam = () => {
                 </div>
                 <div className="our-team-format">
                     <img className='team-profile_image' src={profile_image} alt="profile image"/>
-                    <h5>Vipul Kumar<br/>Co-Founder</h5>
+                    <h5>Saurav shubham<br/>Co-Founder</h5>
                     <p>
                         He is alumni of CIMP, Patna,Bihar.Goal-driven management professional with expertise in dealer management,
                         sales strategy, and market analysis. Currently leading sales initiatives and operational
