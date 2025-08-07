@@ -12,7 +12,7 @@ phases:
       - echo "📦 Installing project dependencies..."
       # Use 'npm ci' for clean and consistent installs in CI/CD environments.
       # '--legacy-peer-deps' is included for compatibility with older dependency trees if needed.
-      - npm ci --legacy-peer-deps
+      - npm i --loglevel=verbose
 
   build:
     commands:
