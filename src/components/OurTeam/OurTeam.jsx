@@ -3,6 +3,7 @@ import './OurTeam.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import arrow_icon from '../../assets/arrow_icon.svg';
 import profile_image from '../../assets/about_profile.svg';
+import avinash_singh from '../../assets/avinash_singh.jpeg';
 
 const OurTeam = () => {
     return (
@@ -16,7 +17,7 @@ const OurTeam = () => {
             <div className="our-team-container">
                 <div className="our-team-format">
                     <img className='team-profile_image'
-                        src={profile_image}
+                        src={avinash_singh}
                          alt="profile image"/>
                     <h5>Avinash Singh <br/>Founder,CEO</h5>
                     <p>
