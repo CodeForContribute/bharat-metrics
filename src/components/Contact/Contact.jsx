@@ -48,15 +48,16 @@ const Contact = () => {
                     <div className="contact-details">
                         <div className="contact-detail">
                             <img src={mail_icon} alt="mail icon"/>
-                            <p>bharatmetrics@gmail.com</p>
+                            <p>info@bharatmetrics.net</p>
                         </div>
                         <div className="contact-detail">
                             <img src={call_icon} alt="call icon"/>
-                            <p>+91 8810251093</p>
+                            <p>(+91) 790 349 9877</p>
                         </div>
                         <div className="contact-detail">
                             <img src={location_icon} alt="location icon"/>
-                            <p>Patna,Bihar,India,843302</p>
+                            <p>Godawari Enclave, 111-A, New Patliputra Colony,
+                                Patliputra, Patna, Bihar - 800013</p>
                         </div>
                     </div>
                 </div>
