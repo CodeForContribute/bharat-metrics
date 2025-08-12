@@ -7,7 +7,7 @@ env:
     # Replace 'your-s3-bucket-name' with the actual name of your S3 bucket
     S3_BUCKET_NAME: "bharatmetrics.net"
     # Optional: If you use CloudFront, replace 'your-cloudfront-distribution-id'
-#    CLOUDFRONT_DISTRIBUTION_ID: "your-cloudfront-distribution-id"
+    # CLOUDFRONT_DISTRIBUTION_ID: "your-cloudfront-distribution-id"
 
 phases:
   install:
@@ -50,13 +50,8 @@ phases:
       # Optional: Invalidate CloudFront cache
       # This is crucial for SPAs. If CloudFront is caching your S3 content,
       # you need to invalidate its cache to ensure users see the latest version immediately.
-#      - |
-#        if [ ! -z "$CLOUDFRONT_DISTRIBUTION_ID" ]; then
-#          echo "Invalidating CloudFront cache for distribution: $CLOUDFRONT_DISTRIBUTION_ID"
-#          aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
-#        else
-#          echo "CLOUDFRONT_DISTRIBUTION_ID is not set. Skipping CloudFront invalidation."
-#        fi
+      # Encapsulating the if/else logic in a single 'bash -c' command to avoid YAML parsing issues.
+      #   - bash -c 'if [ ! -z "$CLOUDFRONT_DISTRIBUTION_ID" ]; then echo "Invalidating CloudFront cache for distribution: $CLOUDFRONT_DISTRIBUTION_ID"; aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"; else echo "CLOUDFRONT_DISTRIBUTION_ID is not set. Skipping CloudFront invalidation."; fi'
 
 artifacts:
   # Define what files should be uploaded as artifacts by CodeBuild
