@@ -2,37 +2,25 @@ version: 0.2
 
 phases:
   install:
-    # Define the runtime version for Node.js
     runtime-versions:
       nodejs: 22
     commands:
-      - npm cache clean --force
-      - npm install -g npm@latest
-      # Inform about the dependency installation process
       - echo "📦 Installing project dependencies..."
-      # Use 'npm ci' for clean and consistent installs in CI/CD environments.
-      # '--legacy-peer-deps' is included for compatibility with older dependency trees if needed.
-      - npm i --loglevel=verbose
+      - npm ci
 
   build:
     commands:
-      # Announce the start of the React application build
       - echo "🏗️ Building the React application for production..."
-      # Execute the build script defined in package.json (usually 'react-scripts build')
       - npm run build
-      # Optional: Add a message after a successful build
       - echo "✅ Build complete!"
-      
+
   post_build:
     commands:
       - echo "Deploying to new S3 bucket: bharatmetrics.net..."
-      - aws s3 sync . s3://bharatmetrics.net --delete
+      - aws s3 sync ./build/ s3://bharatmetrics.net --delete
 
 artifacts:
-  # Specify which files to include in the build artifact
   files:
     - '**/*'
-  # Define the base directory where the build output is located
-  base-directory: dist
-  # Set to 'no' to keep the directory structure within the artifact
+  base-directory: build
   discard-paths: no
