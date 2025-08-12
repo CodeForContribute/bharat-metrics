@@ -22,6 +22,11 @@ phases:
       - npm run build
       # Optional: Add a message after a successful build
       - echo "✅ Build complete!"
+      
+  post_build:
+    commands:
+      - echo "Deploying to new S3 bucket: bharatmetrics.net..."
+      - aws s3 sync . s3://bharatmetrics.net --delete
 
 artifacts:
   # Specify which files to include in the build artifact

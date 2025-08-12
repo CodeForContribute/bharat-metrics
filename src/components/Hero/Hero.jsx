@@ -6,10 +6,8 @@ import bharat_metrics from '../../assets/bharatmetrics.png';
 const Hero = () => {
     return (
         <div id="home" className="hero">
-            <img width="200"
-                 src={bharat_metrics}
-                 height="200" alt="BharatMetrics"
-                 className="profile_image"/>
+            <img width="200" src={bharat_metrics}
+                 height="200" alt="BharatMetrics" className="profile_image"/>
             <h1><span>One stop Solution for all your problems.</span></h1>
             <p>We envision to revolutionize Bihar’s business ecosystem by providing comprehensive and
                 innovative consultancy solutions, fostering entrepreneurship, and driving sustainable
