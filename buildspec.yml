@@ -1,70 +1,20 @@
 version: 0.2
 
-# Define environment variables specific to your deployment
-# These should be set in CodeBuild project settings for security (e.g., in Parameter Store or as build environment variables)
-env:
-  variables:
-    # Replace 'your-s3-bucket-name' with the actual name of your S3 bucket
-    S3_BUCKET_NAME: "bharatmetrics.net"
-    # Optional: If you use CloudFront, replace 'your-cloudfront-distribution-id'
-    # CLOUDFRONT_DISTRIBUTION_ID: "your-cloudfront-distribution-id"
-
 phases:
   install:
+    runtime-versions:
+      nodejs: 22
     commands:
-      # Install Node.js dependencies
-      - echo "Installing Node.js dependencies..."
-      - npm install
-
-  pre_build:
-    commands:
-      # Optional: Run tests or linting before building
-      - echo "Running pre-build checks (e.g., linting, tests)..."
-      # - npm test
-      # - npm run lint
+      - echo Installing dependencies...
+      - npm ci --legacy-peer-deps
 
   build:
     commands:
-      # Build the React application for production
-      # This command creates the 'build' directory with optimized production assets
-      - echo "Building the React application..."
+      - echo Building the React app...
       - npm run build
 
-  post_build:
-    commands:
-      # Clear the S3 bucket before deploying new files (optional, but good for clean deployments)
-      # This ensures no old, unused files remain in the bucket
-      - echo "Cleaning up existing files in S3 bucket: $S3_BUCKET_NAME"
-      - aws s3 rm s3://$S3_BUCKET_NAME/ --recursive
-
-      # Deploy the built React app to S3
-      # The 'build' directory contains your static assets (HTML, CSS, JS, images)
-      - echo "Deploying React app to S3 bucket: $S3_BUCKET_NAME"
-      - aws s3 cp --recursive --acl public-read ./build s3://$S3_BUCKET_NAME/
-
-      # Set cache control headers for index.html to prevent caching
-      # This ensures that when new versions are deployed, the browser fetches the latest index.html
-      - echo "Setting cache-control for index.html in S3..."
-      - aws s3 cp --acl public-read --cache-control "no-cache, no-store, must-revalidate" ./build/index.html s3://$S3_BUCKET_NAME/index.html
-
-      # Optional: Invalidate CloudFront cache
-      # This is crucial for SPAs. If CloudFront is caching your S3 content,
-      # you need to invalidate its cache to ensure users see the latest version immediately.
-      # Encapsulating the if/else logic in a single 'bash -c' command to avoid YAML parsing issues.
-      #   - bash -c 'if [ ! -z "$CLOUDFRONT_DISTRIBUTION_ID" ]; then echo "Invalidating CloudFront cache for distribution: $CLOUDFRONT_DISTRIBUTION_ID"; aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"; else echo "CLOUDFRONT_DISTRIBUTION_ID is not set. Skipping CloudFront invalidation."; fi'
-
 artifacts:
-  # Define what files should be uploaded as artifacts by CodeBuild
-  # In this case, we don't need to upload the build directory as artifacts,
-  # as we are directly deploying to S3 in the post_build phase.
   files:
-  # You might want to include build logs or other reports here if needed.
-  # - "**/*"
-  discard-paths: yes # Discard the path structure when uploading artifacts (useful if you were collecting logs)
-
-cache:
-  # Define directories to cache between builds to speed up subsequent builds
-  paths:
-    # Cache node_modules to avoid reinstalling them every time
-    - '/root/.npm/**/**'
-    - 'node_modules/**/*'
+    - '**/*'
+  base-directory: dist
+  discard-paths: no
