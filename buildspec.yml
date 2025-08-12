@@ -5,22 +5,16 @@ phases:
     runtime-versions:
       nodejs: 22
     commands:
-      - echo "📦 Installing project dependencies..."
-      - npm ci
+      - echo Installing dependencies...
+      - npm ci --legacy-peer-deps
 
   build:
     commands:
-      - echo "🏗️ Building the React application for production..."
+      - echo Building the React app...
       - npm run build
-      - echo "✅ Build complete!"
-
-  post_build:
-    commands:
-      - echo "Deploying to new S3 bucket: bharatmetrics.net..."
-      - aws s3 sync ./build/ s3://bharatmetrics.net --delete
 
 artifacts:
   files:
     - '**/*'
-  base-directory: build
+  base-directory: dist
   discard-paths: no
