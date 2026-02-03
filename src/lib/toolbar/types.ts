@@ -10,7 +10,7 @@ export interface MenuItemType {
   icon?: React.ReactNode;
   displayType?: DisplayType;
   navigate?: string;
-  menuSX?: React.CSSProperties;
+  menuSX?: SxProps<Theme>;
   menus?: MenuItemType[];
   sx?:SxProps<Theme>;
 }
@@ -18,7 +18,7 @@ export interface MenuItemType {
 export interface LogoProps {
   id: string;
   logoImage: React.ReactNode;
-  logoSX?: React.CSSProperties;
+  logoSX?: SxProps<Theme>;
   direction?: 'Left' | 'Right' | 'Center';
   separator?: boolean;
   sx?:SxProps<Theme>;
@@ -27,7 +27,7 @@ export interface LogoProps {
 export interface WebsiteNameProps {
   id: string;
   name: string;
-  nameSX?: React.CSSProperties;
+  nameSX?: SxProps<Theme>;
   sx?:SxProps<Theme>;
 }
 

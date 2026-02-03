@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ToolbarProps, MenuItemType } from "./types";
-import { AppBar, Box, Menu, Toolbar } from "@mui/material";
+import { AppBar, Box, Menu, Toolbar, SxProps, Theme } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IconComponent } from "../icon-button/IconComponent";
 
@@ -227,9 +227,9 @@ export function CT_Toolbar({
                 display: "flex",
                 alignItems: "center",
                 gap: 1,
-                ...logo.logoSX,
-                ...logo.sx,
-              }}
+                ...(logo.logoSX as object),
+                ...(logo.sx as object),
+              } as SxProps<Theme>}
             >
               {logo.logoImage}
               {logo.separator && (
@@ -245,9 +245,9 @@ export function CT_Toolbar({
                 fontWeight: "bold",
                 fontSize: { xs: 16, sm: 18, md: 20 },
                 mx: 2,
-                ...websiteName.nameSX,
-                ...websiteName.sx,
-              }}
+                ...(websiteName.nameSX as object),
+                ...(websiteName.sx as object),
+              } as SxProps<Theme>}
             >
               {websiteName.name}
             </Box>
