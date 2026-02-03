@@ -8,104 +8,122 @@ All colors MUST be HSL.
 
 @layer base {
     :root {
-        /* BMD Brand Colors - Dark navy blue, white, gold */
+        /* BMD Brand Colors - Deep Teal + Coral (Modern & Fresh) */
         --background: 0 0% 100%;
-        --foreground: 208 100% 14%;
+        --foreground: 174 79% 18%;
 
         --card: 0 0% 100%;
-        --card-foreground: 208 100% 14%;
+        --card-foreground: 174 79% 18%;
 
         --popover: 0 0% 100%;
-        --popover-foreground: 208 100% 14%;
+        --popover-foreground: 174 79% 18%;
 
-        /* Primary - Dark Navy Blue (#002147) */
-        --primary: 208 100% 14%;
+        /* Primary - Deep Teal (#0D4F4F) */
+        --primary: 174 79% 18%;
         --primary-foreground: 0 0% 100%;
 
-        /* Secondary - Light variations */
-        --secondary: 208 50% 95%;
-        --secondary-foreground: 208 100% 14%;
+        /* Secondary - Light Teal variations */
+        --secondary: 174 35% 95%;
+        --secondary-foreground: 174 79% 18%;
 
-        --muted: 208 30% 96%;
-        --muted-foreground: 208 20% 50%;
+        --muted: 174 20% 96%;
+        --muted-foreground: 174 30% 40%;
 
-        /* Accent - Gold (#C9A63A) */
-        --accent: 47 55% 50%;
-        --accent-foreground: 208 100% 14%;
+        /* Accent - Coral (#FF6B5B) */
+        --accent: 6 100% 68%;
+        --accent-foreground: 0 0% 100%;
 
         --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 0 0% 100%;
 
-        --border: 208 30% 90%;
-        --input: 208 30% 90%;
-        --ring: 47 55% 50%;
+        --border: 174 20% 88%;
+        --input: 174 20% 88%;
+        --ring: 6 100% 68%;
 
         --radius: 0.5rem;
 
-        /* Additional BMD Design Tokens */
-        --navy-deep: 208 100% 14%;
-        --navy-light: 208 50% 95%;
-        --gold-primary: 47 55% 50%;
-        --gold-light: 47 60% 85%;
+        /* Additional BMD Design Tokens - Teal + Coral */
+        --teal-deep: 174 79% 18%;
+        --teal-light: 174 35% 95%;
+        --coral-primary: 6 100% 68%;
+        --coral-light: 6 80% 92%;
+
+        /* Legacy aliases for compatibility */
+        --navy-deep: 174 79% 18%;
+        --navy-light: 174 35% 95%;
+        --gold-primary: 6 100% 68%;
+        --gold-light: 6 80% 92%;
 
         /* Gradients */
-        --gradient-hero: linear-gradient(135deg, hsl(var(--navy-deep)), hsl(208 80% 20%));
-        --gradient-section: linear-gradient(180deg, hsl(var(--navy-light)), hsl(0 0% 100%));
-        --gradient-gold: linear-gradient(135deg, hsl(var(--gold-primary)), hsl(47 70% 60%));
+        --gradient-hero: linear-gradient(135deg, hsl(174 79% 18%), hsl(174 70% 25%));
+        --gradient-section: linear-gradient(180deg, hsl(var(--teal-light)), hsl(0 0% 100%));
+        --gradient-gold: linear-gradient(135deg, hsl(var(--coral-primary)), hsl(6 100% 75%));
 
         /* Shadows */
-        --shadow-corporate: 0 10px 40px -10px hsl(var(--navy-deep) / 0.15);
-        --shadow-gold: 0 5px 20px -5px hsl(var(--gold-primary) / 0.3);
+        --shadow-corporate: 0 10px 40px -10px hsl(var(--teal-deep) / 0.2);
+        --shadow-gold: 0 5px 20px -5px hsl(var(--coral-primary) / 0.35);
 
         /* Transitions */
         --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
         --sidebar-background: 0 0% 98%;
         --sidebar-foreground: 240 5.3% 26.1%;
-        --sidebar-primary: 240 5.9% 10%;
+        --sidebar-primary: 174 79% 18%;
         --sidebar-primary-foreground: 0 0% 98%;
-        --sidebar-accent: 240 4.8% 95.9%;
-        --sidebar-accent-foreground: 240 5.9% 10%;
-        --sidebar-border: 220 13% 91%;
-        --sidebar-ring: 217.2 91.2% 59.8%;
+        --sidebar-accent: 174 35% 95%;
+        --sidebar-accent-foreground: 174 79% 18%;
+        --sidebar-border: 174 20% 91%;
+        --sidebar-ring: 6 100% 68%;
     }
 
     .dark {
-        --background: 222.2 84% 4.9%;
-        --foreground: 210 40% 98%;
+        --background: 174 50% 6%;
+        --foreground: 174 20% 95%;
 
-        --card: 222.2 84% 4.9%;
-        --card-foreground: 210 40% 98%;
+        --card: 174 50% 8%;
+        --card-foreground: 174 20% 95%;
 
-        --popover: 222.2 84% 4.9%;
-        --popover-foreground: 210 40% 98%;
+        --popover: 174 50% 8%;
+        --popover-foreground: 174 20% 95%;
 
-        --primary: 210 40% 98%;
-        --primary-foreground: 222.2 47.4% 11.2%;
+        --primary: 174 60% 45%;
+        --primary-foreground: 174 50% 6%;
 
-        --secondary: 217.2 32.6% 17.5%;
-        --secondary-foreground: 210 40% 98%;
+        --secondary: 174 40% 15%;
+        --secondary-foreground: 174 20% 95%;
 
-        --muted: 217.2 32.6% 17.5%;
-        --muted-foreground: 215 20.2% 65.1%;
+        --muted: 174 30% 15%;
+        --muted-foreground: 174 15% 60%;
 
-        --accent: 217.2 32.6% 17.5%;
-        --accent-foreground: 210 40% 98%;
+        --accent: 6 100% 68%;
+        --accent-foreground: 0 0% 100%;
 
         --destructive: 0 62.8% 30.6%;
         --destructive-foreground: 210 40% 98%;
 
-        --border: 217.2 32.6% 17.5%;
-        --input: 217.2 32.6% 17.5%;
-        --ring: 212.7 26.8% 83.9%;
-        --sidebar-background: 240 5.9% 10%;
-        --sidebar-foreground: 240 4.8% 95.9%;
-        --sidebar-primary: 224.3 76.3% 48%;
+        --border: 174 30% 18%;
+        --input: 174 30% 18%;
+        --ring: 6 100% 68%;
+
+        /* Dark mode teal + coral tokens */
+        --teal-deep: 174 60% 45%;
+        --teal-light: 174 40% 15%;
+        --coral-primary: 6 100% 68%;
+        --coral-light: 6 70% 80%;
+
+        --navy-deep: 174 60% 45%;
+        --navy-light: 174 40% 15%;
+        --gold-primary: 6 100% 68%;
+        --gold-light: 6 70% 80%;
+
+        --sidebar-background: 174 50% 8%;
+        --sidebar-foreground: 174 20% 95%;
+        --sidebar-primary: 6 100% 68%;
         --sidebar-primary-foreground: 0 0% 100%;
-        --sidebar-accent: 240 3.7% 15.9%;
-        --sidebar-accent-foreground: 240 4.8% 95.9%;
-        --sidebar-border: 240 3.7% 15.9%;
-        --sidebar-ring: 217.2 91.2% 59.8%;
+        --sidebar-accent: 174 40% 15%;
+        --sidebar-accent-foreground: 174 20% 95%;
+        --sidebar-border: 174 30% 18%;
+        --sidebar-ring: 6 100% 68%;
     }
 }
 
